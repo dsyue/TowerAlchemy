@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://djk00c0ve56nx"]
+
+[ext_resource type="Texture2D" path="res://Assets/Tres/TextureRed.tres" id="1_6kh7s"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0x6f7"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+
+[node name="Temp" type="Node2D"]
+position = Vector2(960, 540)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+texture = ExtResource("1_6kh7s")
+process_material = SubResource("ParticleProcessMaterial_0x6f7")

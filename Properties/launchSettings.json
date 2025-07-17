@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "TowerAlchemy": {
+      "commandName": "Project"
+    },
+    "TowerAlchemy-Run": {
+      "commandName": "Executable",
+      "executablePath": "C:\\tools\\Godot_4.4.1\\Godot_v4.4.1-stable_mono_win64.exe",
+      "commandLineArgs": "--path C:\\Users\\guofei\\source\\godot\\TowerAlchemy"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+[gd_scene load_steps=22 format=3 uid="uid://dmceibrt45xki"]
+
+[ext_resource type="Texture2D" uid="uid://bbwgft3xdlmmv" path="res://Assets/Images/PNG/1/1_enemies_1_run_000.png" id="1_2da0l"]
+[ext_resource type="Texture2D" uid="uid://cs6ayx3y6dnh" path="res://Assets/Images/PNG/1/1_enemies_1_run_001.png" id="2_1rto0"]
+[ext_resource type="Texture2D" uid="uid://bjopeh1xosgml" path="res://Assets/Images/PNG/1/1_enemies_1_run_002.png" id="3_3813r"]
+[ext_resource type="Texture2D" uid="uid://bdixqfq24joao" path="res://Assets/Images/PNG/1/1_enemies_1_run_003.png" id="4_jqa8e"]
+[ext_resource type="Texture2D" uid="uid://dgu4ukm7151ok" path="res://Assets/Images/PNG/1/1_enemies_1_run_004.png" id="5_pdv4x"]
+[ext_resource type="Texture2D" uid="uid://fapxui7668bp" path="res://Assets/Images/PNG/1/1_enemies_1_run_005.png" id="6_ls0l6"]
+[ext_resource type="Texture2D" uid="uid://di3hvia40n28s" path="res://Assets/Images/PNG/1/1_enemies_1_run_006.png" id="7_2cqb1"]
+[ext_resource type="Texture2D" uid="uid://com2xaabvbqt0" path="res://Assets/Images/PNG/1/1_enemies_1_run_007.png" id="8_qqau8"]
+[ext_resource type="Texture2D" uid="uid://cytteftioqduq" path="res://Assets/Images/PNG/1/1_enemies_1_run_008.png" id="9_cdnq7"]
+[ext_resource type="Texture2D" uid="uid://lt2jvbaj5g58" path="res://Assets/Images/PNG/1/1_enemies_1_run_009.png" id="10_oc4dd"]
+[ext_resource type="Texture2D" uid="uid://d1js5hsgt04uh" path="res://Assets/Images/PNG/1/1_enemies_1_run_010.png" id="11_uj25c"]
+[ext_resource type="Texture2D" uid="uid://csqgujmuqumcn" path="res://Assets/Images/PNG/1/1_enemies_1_run_011.png" id="12_7mu2o"]
+[ext_resource type="Texture2D" uid="uid://ce1nk4vpg7fpj" path="res://Assets/Images/PNG/1/1_enemies_1_run_012.png" id="13_kdvdp"]
+[ext_resource type="Texture2D" uid="uid://wqbayc5wdaxr" path="res://Assets/Images/PNG/1/1_enemies_1_run_013.png" id="14_fi77x"]
+[ext_resource type="Texture2D" uid="uid://b0wpvlu81ecll" path="res://Assets/Images/PNG/1/1_enemies_1_run_014.png" id="15_o5acd"]
+[ext_resource type="Texture2D" uid="uid://cgfpfsbrimwd1" path="res://Assets/Images/PNG/1/1_enemies_1_run_015.png" id="16_xinko"]
+[ext_resource type="Texture2D" uid="uid://c3mruxxqjklsj" path="res://Assets/Images/PNG/1/1_enemies_1_run_016.png" id="17_v2kul"]
+[ext_resource type="Texture2D" uid="uid://dtky53ypk72i3" path="res://Assets/Images/PNG/1/1_enemies_1_run_017.png" id="18_ktl0y"]
+[ext_resource type="Texture2D" uid="uid://v6xuwobdu1e1" path="res://Assets/Images/PNG/1/1_enemies_1_run_018.png" id="19_srf33"]
+[ext_resource type="Texture2D" uid="uid://dvu7t8du4gq3g" path="res://Assets/Images/PNG/1/1_enemies_1_run_019.png" id="20_2gcfg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nrdf2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2da0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1rto0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3813r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jqa8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pdv4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ls0l6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2cqb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qqau8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cdnq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oc4dd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_uj25c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7mu2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kdvdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fi77x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_o5acd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xinko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_v2kul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ktl0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_srf33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_2gcfg")
+}],
+"loop": true,
+"name": &"run",
+"speed": 30.0
+}]
+
+[node name="TestAsset" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nrdf2")
+animation = &"run"
+frame_progress = 0.459972

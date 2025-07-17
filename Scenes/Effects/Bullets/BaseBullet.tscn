@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7cja36cl23os"]
+
+[ext_resource type="Script" uid="uid://bfuf34lti6xvh" path="res://Scripts/Effects/Bullets/BaseBullet.cs" id="1_1jdct"]
+[ext_resource type="PackedScene" uid="uid://dl5rym7lymq1w" path="res://Scenes/Effects/AttackEffect.tscn" id="2_7b50a"]
+[ext_resource type="Texture2D" path="res://Assets/Images/Bullets/white_bullet.tres" id="3_5ld2c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7b50a"]
+size = Vector2(2, 2)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_1jdct")
+HitEffectScene = ExtResource("2_7b50a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7b50a")
+one_way_collision_margin = 10.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_5ld2c")
+expand_mode = 1

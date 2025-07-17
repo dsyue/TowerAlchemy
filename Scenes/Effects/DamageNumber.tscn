@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c87ygi0rnwpgs"]
+
+[ext_resource type="Script" uid="uid://bmxm3ky32qmyb" path="res://Scripts/Effects/DamageNumber.cs" id="1_gouwn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gouwn"]
+font_size = 32
+
+[node name="DamageNumber" type="Node2D" node_paths=PackedStringArray("TextLabel")]
+script = ExtResource("1_gouwn")
+TextLabel = NodePath("Text")
+
+[node name="Text" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "-30"
+label_settings = SubResource("LabelSettings_gouwn")

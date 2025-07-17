@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://ihfhyv105ero"]
+
+[ext_resource type="Script" uid="uid://djp8puwrb36ep" path="res://Scripts/Main.cs" id="1_r150o"]
+[ext_resource type="PackedScene" uid="uid://bdd3eve5pyejs" path="res://Scenes/Enemies/BaseEnemy.tscn" id="2_kln2b"]
+[ext_resource type="PackedScene" uid="uid://d22ialycfurc" path="res://Scenes/Tower.tscn" id="3_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://cq351mtb0n7nr" path="res://Scenes/Base/GoldManager.tscn" id="4_rgh2o"]
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("EnemyContainer")]
+script = ExtResource("1_r150o")
+EnemyScene = ExtResource("2_kln2b")
+TowerScene = ExtResource("3_pbw6q")
+EnemyContainer = NodePath("EnemyContainer")
+
+[node name="Tower" parent="." instance=ExtResource("3_pbw6q")]
+
+[node name="EnemyContainer" type="Node2D" parent="."]
+
+[node name="GoldManager" parent="." instance=ExtResource("4_rgh2o")]

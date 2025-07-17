@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://d22ialycfurc"]
+
+[ext_resource type="Script" uid="uid://b7ahe3trwx4tk" path="res://Scripts/Tower.cs" id="1_ry8d0"]
+[ext_resource type="PackedScene" uid="uid://dl5rym7lymq1w" path="res://Scenes/Effects/AttackEffect.tscn" id="2_4yjk7"]
+[ext_resource type="PackedScene" uid="uid://c7cja36cl23os" path="res://Scenes/Effects/Bullets/BaseBullet.tscn" id="3_tpt2e"]
+[ext_resource type="Texture2D" uid="uid://cikam2a1q4bic" path="res://Assets/Images/01_Towers/2 Idle/7.png" id="4_xyfrd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyfrd"]
+atlas = ExtResource("4_xyfrd")
+region = Rect2(0, 0, 70, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_il7y0"]
+atlas = ExtResource("4_xyfrd")
+region = Rect2(70, 0, 70, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6scv"]
+atlas = ExtResource("4_xyfrd")
+region = Rect2(140, 0, 70, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqd11"]
+atlas = ExtResource("4_xyfrd")
+region = Rect2(210, 0, 70, 130)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kmdyl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyfrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_il7y0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6scv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqd11")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Tower" type="Node2D"]
+script = ExtResource("1_ry8d0")
+Range = 400.0
+AttackEffectScene = ExtResource("2_4yjk7")
+BulletScene = ExtResource("3_tpt2e")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kmdyl")
+frame_progress = 0.165421

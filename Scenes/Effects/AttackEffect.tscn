@@ -1,0 +1,88 @@
+[gd_scene load_steps=17 format=3 uid="uid://dl5rym7lymq1w"]
+
+[ext_resource type="Script" uid="uid://bunwmpxdgkl6q" path="res://Scripts/Effects/AttackEffect.cs" id="1_7gil4"]
+[ext_resource type="Texture2D" path="res://FlatRed8x8.tres" id="2_qm8xj"]
+[ext_resource type="Texture2D" uid="uid://ddgk81w2cupm4" path="res://Assets/Images/02_Booms/PNG/2/1.png" id="3_tbnv0"]
+[ext_resource type="Texture2D" uid="uid://lpdnra8p360d" path="res://Assets/Images/02_Booms/PNG/2/2.png" id="4_n2xui"]
+[ext_resource type="Texture2D" uid="uid://bxjmy5usevv53" path="res://Assets/Images/02_Booms/PNG/2/3.png" id="5_y8pbx"]
+[ext_resource type="Texture2D" uid="uid://dk0tkwsc0drnh" path="res://Assets/Images/02_Booms/PNG/2/4.png" id="6_27278"]
+[ext_resource type="Texture2D" uid="uid://dwdkfvpl2pdfs" path="res://Assets/Images/02_Booms/PNG/2/5.png" id="7_e8cp5"]
+[ext_resource type="Texture2D" uid="uid://bv31aqyiw1qyy" path="res://Assets/Images/02_Booms/PNG/2/6.png" id="8_lfsif"]
+[ext_resource type="Texture2D" uid="uid://cuw86hgk8gajx" path="res://Assets/Images/02_Booms/PNG/2/7.png" id="9_l24du"]
+[ext_resource type="Texture2D" uid="uid://c638vi2t8cdi3" path="res://Assets/Images/02_Booms/PNG/2/8.png" id="10_6ctjw"]
+[ext_resource type="Texture2D" uid="uid://d8ub3m3g8by0" path="res://Assets/Images/02_Booms/PNG/2/9.png" id="11_y73we"]
+[ext_resource type="Texture2D" uid="uid://l3q4a6h3u0wh" path="res://Assets/Images/02_Booms/PNG/2/10.png" id="12_uhdol"]
+[ext_resource type="Texture2D" uid="uid://bysqn7666t1bm" path="res://Assets/Images/02_Booms/PNG/2/11.png" id="13_n6ma4"]
+[ext_resource type="Texture2D" uid="uid://dkuyovtyki0fu" path="res://Assets/Images/02_Booms/PNG/2/12.png" id="14_y044i"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7gil4"]
+lifetime_randomness = 0.67
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 108.45
+initial_velocity_max = 171.83
+gravity = Vector3(0, 10, 0)
+linear_accel_min = -250.0
+linear_accel_max = -250.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jql75"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tbnv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n2xui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_y8pbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_27278")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_e8cp5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lfsif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_l24du")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6ctjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_y73we")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_uhdol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_n6ma4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_y044i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="AttackEffect" type="Node2D"]
+script = ExtResource("1_7gil4")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+visible = false
+amount = 50
+sub_emitter = NodePath(".")
+texture = ExtResource("2_qm8xj")
+lifetime = 0.7
+explosiveness = 1.0
+randomness = 0.64
+process_material = SubResource("ParticleProcessMaterial_7gil4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_jql75")
+frame_progress = 0.853238
